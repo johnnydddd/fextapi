@@ -1,4 +1,4 @@
-"""Path conversion utilities for faxtapi."""
+"""Path conversion utilities for fextapi."""
 
 import re
 from pathlib import Path

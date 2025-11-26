@@ -1,8 +1,8 @@
 [project]
-name = "my-faxtapi-project"
+name = "my-fextapi-project"
 version = "0.1.0"
-description = "A FastAPI project using faxtapi"
+description = "A FastAPI project using fextapi"
 requires-python = ">=3.13"
 dependencies = [
-    "faxtapi>=0.1.0",
+    "fextapi>=0.1.0",
 ]

@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from faxtapi import init
+from fextapi import init
 
 app = FastAPI()
 

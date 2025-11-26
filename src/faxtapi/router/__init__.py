@@ -1,1 +1,1 @@
-"""Router module for faxtapi."""
+"""Router module for fextapi."""

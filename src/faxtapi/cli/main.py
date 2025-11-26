@@ -1,28 +1,28 @@
-"""Main CLI entry point for faxtapi."""
+"""Main CLI entry point for fextapi."""
 
 import argparse
 import sys
 
-from faxtapi import __version__
+from fextapi import __version__
 
 
 def main() -> None:
     """Main CLI entry point."""
     parser = argparse.ArgumentParser(
-        prog="faxtapi",
+        prog="fextapi",
         description="File-system based routing for FastAPI",
     )
 
     parser.add_argument(
         "--version",
         action="version",
-        version=f"faxtapi v{__version__}",
+        version=f"fextapi v{__version__}",
     )
 
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
 
     # Init command
-    subparsers.add_parser("init", help="Initialize a new faxtapi project")
+    subparsers.add_parser("init", help="Initialize a new fextapi project")
 
     # Run command
     run_parser = subparsers.add_parser("run", help="Start the development server")
@@ -54,11 +54,11 @@ def main() -> None:
 
     # Handle commands
     if args.command == "init":
-        from faxtapi.cli.init import init_project
+        from fextapi.cli.init import init_project
         init_project()
 
     elif args.command == "run":
-        from faxtapi.cli.run import run_server
+        from fextapi.cli.run import run_server
         run_server(
             host=args.host,
             port=args.port,
@@ -69,7 +69,7 @@ def main() -> None:
         parser.print_help()
 
     elif args.command == "version":
-        print(f"faxtapi v{__version__}")
+        print(f"fextapi v{__version__}")
 
     else:
         # No command provided, show help

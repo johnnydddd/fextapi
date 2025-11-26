@@ -1,12 +1,12 @@
-# My Faxtapi Project
+# My fextapi Project
 
-A FastAPI project using faxtapi for file-system based routing.
+A FastAPI project using fextapi for file-system based routing.
 
 ## Quick Start
 
 ```bash
 # Run the development server
-faxtapi run
+fextapi run
 
 # Visit http://127.0.0.1:8000/docs for API documentation
 ```
@@ -22,5 +22,5 @@ app/
 
 ## Documentation
 
-- [Faxtapi GitHub](https://github.com/faxtapi/faxtapi)
+- [fextapi GitHub](https://github.com/fextapi/fextapi)
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)

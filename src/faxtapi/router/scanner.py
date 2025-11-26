@@ -63,7 +63,7 @@ def _discover_routes(current_path: Path, app_root: Path) -> Generator[RouteInfo,
     Yields:
         RouteInfo objects for each discovered route
     """
-    from faxtapi.utils.path import build_api_path
+    from fextapi.utils.path import build_api_path
 
     for item in current_path.iterdir():
         if item.is_file() and item.name == "route.py":

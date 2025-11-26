@@ -16,7 +16,7 @@ def run_server(host: str = "127.0.0.1", port: int = 8000, reload: bool = True) -
     # Check if app directory exists
     app_dir = Path.cwd() / "app"
     if not app_dir.exists():
-        print("❌ Error: app directory not found, please run 'faxtapi init' first")
+        print("❌ Error: app directory not found, please run 'fextapi init' first")
         raise SystemExit(1)
 
     # Check if main.py exists
@@ -25,7 +25,7 @@ def run_server(host: str = "127.0.0.1", port: int = 8000, reload: bool = True) -
         print("❌ Error: main.py file not found")
         raise SystemExit(1)
 
-    print("🚀 Starting Faxtapi development server...\n")
+    print("🚀 Starting fextapi development server...\n")
 
     # Import and run uvicorn
     try:

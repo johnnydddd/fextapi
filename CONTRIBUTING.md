@@ -1,13 +1,13 @@
-# Contributing to Faxtapi
+# Contributing to fextapi
 
-Thank you for your interest in contributing to Faxtapi! We welcome contributions from the community.
+Thank you for your interest in contributing to fextapi! We welcome contributions from the community.
 
 ## Getting Started
 
 1. **Fork the repository**
    ```bash
-   git clone https://github.com/faxtapi/faxtapi.git
-   cd faxtapi
+   git clone https://github.com/fextapi/fextapi.git
+   cd fextapi
    ```
 
 2. **Install development dependencies**

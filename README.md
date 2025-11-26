@@ -1,4 +1,4 @@
-# Faxtapi
+# fextapi
 
 **File-system based routing for FastAPI** - Build APIs like Next.js App Router
 
@@ -17,20 +17,20 @@
 
 ```bash
 # Using uv (recommended)
-uv add faxtapi
+uv add fextapi
 
 # Using pip
-pip install faxtapi
+pip install fextapi
 ```
 
 ## 🎯 Quick Start
 
 ```bash
 # Initialize a new project
-faxtapi init
+fextapi init
 
 # Start development server
-faxtapi run
+fextapi run
 
 # Visit http://127.0.0.1:8000/docs
 ```
@@ -59,7 +59,7 @@ my-api-project/
 
 ```python
 from fastapi import FastAPI
-from faxtapi import init
+from fextapi import init
 
 app = FastAPI()
 
@@ -118,22 +118,22 @@ When accessing `/products/stats`:
 
 ```bash
 # Initialize new project
-faxtapi init
+fextapi init
 
 # Start development server
-faxtapi run
+fextapi run
 
 # Start server with custom host/port
-faxtapi run --host 0.0.0.0 --port 3000
+fextapi run --host 0.0.0.0 --port 3000
 
 # Disable auto-reload
-faxtapi run --no-reload
+fextapi run --no-reload
 
 # Show help
-faxtapi help
+fextapi help
 
 # Show version
-faxtapi version
+fextapi version
 ```
 
 ## 🧪 Requirements
@@ -152,9 +152,9 @@ Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 
 ## 🔗 Links
 
-- [GitHub Repository](https://github.com/johnnydddd/faxtapi)
+- [GitHub Repository](https://github.com/johnnydddd/fextapi)
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
-- [Issue Tracker](https://github.com/johnnydddd/faxtapi/issues)
+- [Issue Tracker](https://github.com/johnnydddd/fextapi/issues)
 
 ## ⭐ Acknowledgments
 

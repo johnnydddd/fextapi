@@ -1,1 +1,1 @@
-"""CLI module for faxtapi."""
+"""CLI module for fextapi."""

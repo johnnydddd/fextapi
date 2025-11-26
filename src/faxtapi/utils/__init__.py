@@ -1,1 +1,1 @@
-"""Utility module for faxtapi."""
+"""Utility module for fextapi."""

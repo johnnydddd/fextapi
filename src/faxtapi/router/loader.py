@@ -31,7 +31,7 @@ def load_router(route_file: Path) -> Any:
         raise RouterLoadError(f"Route path is not a file: {route_file}")
 
     # Generate a unique module name to avoid conflicts
-    module_name = f"faxtapi_route_{route_file.parent.name}_{id(route_file)}"
+    module_name = f"fextapi_route_{route_file.parent.name}_{id(route_file)}"
 
     try:
         # Load the module from file path

@@ -1,4 +1,4 @@
-"""CLI init command to initialize a new faxtapi project."""
+"""CLI init command to initialize a new fextapi project."""
 
 import shutil
 from pathlib import Path
@@ -6,7 +6,7 @@ from pathlib import Path
 
 def init_project(target_dir: Path = None) -> None:
     """
-    Initialize a new faxtapi project in the target directory.
+    Initialize a new fextapi project in the target directory.
 
     Args:
         target_dir: Target directory for the project (default: current directory)
@@ -52,5 +52,5 @@ def init_project(target_dir: Path = None) -> None:
 
     print("\n✅ Project initialized successfully!")
     print("\nNext steps:")
-    print("  1. Run 'faxtapi run' to start development server")
+    print("  1. Run 'fextapi run' to start development server")
     print("  2. Visit http://127.0.0.1:8000/docs to view API documentation")

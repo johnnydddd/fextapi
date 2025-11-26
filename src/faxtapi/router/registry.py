@@ -4,13 +4,13 @@ from pathlib import Path
 
 from fastapi import FastAPI
 
-from faxtapi.router.loader import RouterLoadError, load_router
-from faxtapi.router.scanner import scan_routes
+from fextapi.router.loader import RouterLoadError, load_router
+from fextapi.router.scanner import scan_routes
 
 
 def init(app: FastAPI, app_root: Path | str = "app") -> None:
     """
-    Initialize faxtapi by scanning and registering all routes to the FastAPI app.
+    Initialize fextapi by scanning and registering all routes to the FastAPI app.
 
     Args:
         app: FastAPI application instance
