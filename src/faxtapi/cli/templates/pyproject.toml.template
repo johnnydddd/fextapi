@@ -1,0 +1,8 @@
+[project]
+name = "my-faxtapi-project"
+version = "0.1.0"
+description = "A FastAPI project using faxtapi"
+requires-python = ">=3.13"
+dependencies = [
+    "faxtapi>=0.1.0",
+]

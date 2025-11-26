@@ -1,0 +1,26 @@
+# My Faxtapi Project
+
+A FastAPI project using faxtapi for file-system based routing.
+
+## Quick Start
+
+```bash
+# Run the development server
+faxtapi run
+
+# Visit http://127.0.0.1:8000/docs for API documentation
+```
+
+## Project Structure
+
+```
+app/
+├── main.py          # FastAPI application entry point
+└── api/
+    └── route.py     # Example API route
+```
+
+## Documentation
+
+- [Faxtapi GitHub](https://github.com/faxtapi/faxtapi)
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
