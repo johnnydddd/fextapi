@@ -8,13 +8,15 @@ from fextapi.router.loader import RouterLoadError, load_router
 from fextapi.router.scanner import scan_routes
 
 
-def init(app: FastAPI, app_root: Path | str = "app") -> None:
+def init(app: FastAPI, app_root: Path | str = "app", scan_dir: str | None = None) -> None:
     """
     Initialize fextapi by scanning and registering all routes to the FastAPI app.
 
     Args:
         app: FastAPI application instance
         app_root: Path to the app root directory (default: "app")
+        scan_dir: Optional subdirectory to scan (e.g., "routers").
+                  If provided, scans app_root/scan_dir but excludes scan_dir from API prefix.
 
     Raises:
         FileNotFoundError: If app_root doesn't exist
@@ -29,7 +31,7 @@ def init(app: FastAPI, app_root: Path | str = "app") -> None:
         app_root = Path.cwd() / app_root
 
     # Scan for routes
-    routes = scan_routes(app_root)
+    routes = scan_routes(app_root, scan_dir)
 
     if not routes:
         print(f"⚠️  Warning: No route.py files found in {app_root}")

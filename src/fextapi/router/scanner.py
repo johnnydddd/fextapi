@@ -24,12 +24,14 @@ class RouteInfo:
         return f"RouteInfo(api_path='{self.api_path}', file_path='{self.file_path}')"
 
 
-def scan_routes(app_root: Path) -> list[RouteInfo]:
+def scan_routes(app_root: Path, scan_dir: str | None = None) -> list[RouteInfo]:
     """
     Scan app directory and discover all route.py files.
 
     Args:
         app_root: Path to the app root directory
+        scan_dir: Optional subdirectory to scan (e.g., "routers").
+                  If provided, scans app_root/scan_dir but excludes scan_dir from API prefix.
 
     Returns:
         List of RouteInfo objects sorted by priority (static routes first)
@@ -43,7 +45,20 @@ def scan_routes(app_root: Path) -> list[RouteInfo]:
     if not app_root.is_dir():
         raise NotADirectoryError(f"App path is not a directory: {app_root}")
 
-    routes = list(_discover_routes(app_root, app_root))
+    # Determine actual scan path and prefix base
+    if scan_dir:
+        scan_path = app_root / scan_dir
+        if not scan_path.exists():
+            raise FileNotFoundError(f"Scan directory not found: {scan_path}")
+        if not scan_path.is_dir():
+            raise NotADirectoryError(f"Scan path is not a directory: {scan_path}")
+        # Use scan_path as the base for API path calculation (excludes scan_dir from prefix)
+        prefix_base = scan_path
+    else:
+        scan_path = app_root
+        prefix_base = app_root
+
+    routes = list(_discover_routes(scan_path, prefix_base))
 
     # Sort routes: static routes first, then dynamic routes
     # This ensures /products/stats is matched before /products/{productid}

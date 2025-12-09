@@ -53,7 +53,7 @@ def build_api_path(relative_path: Path, app_root: Path) -> str:
     
     # Build path
     if not parts:
-        return "/"
+        return ""  # Return empty string for root path (FastAPI prefix requirement)
     
     path = "/" + "/".join(parts)
     return path
