@@ -120,7 +120,7 @@ When accessing `/products/stats`:
 # Initialize new project
 fextapi init
 
-# Start development server
+# Start development server (default: host=127.0.0.1, port=8000)
 fextapi run
 
 # Start server with custom host/port
